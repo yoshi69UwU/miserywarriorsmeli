@@ -1,0 +1,82 @@
+/* Estilos para el contenedor */
+.container {
+    position: relative;
+    width: 1750px; /* Ajusta el ancho del contenedor según sea necesario */
+    height: 860px; /* Ajusta la altura del contenedor según sea necesario */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+/* Estilos para los personajes */
+.personaje {
+    position: absolute;
+}
+
+.png-crow {
+    top: 180px; /* Ajusta la posición vertical según sea necesario */
+    left: 950px; /* Ajusta la posición horizontal según sea necesario */
+    /* Añade más estilos según sea necesario */
+     height: 600px; /* Ajusta la altura según sea necesario */
+    width: 600px; /* Ajusta el ancho según sea necesario */
+}
+
+.png-cataws {
+    top: 200px; /* Ajusta la posición vertical según sea necesario */
+    left: 120px; /* Ajusta la posición horizontal según sea necesario */
+    height: 600px; /* Ajusta la altura según sea necesario */
+    width: 600px; /* Ajusta el ancho según sea necesario */
+    /* Añade más estilos según sea necesario */
+}
+
+
+.escenario {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa todo el alto del contenedor */
+}
+/* Estilos para las barras de vida */
+.barra-vida {
+    position: relative;
+    height: 20px; /* Altura de la barra de vida */
+    width: 200px; /* Ancho de la barra de vida */
+    background-color: #ddd; /* Color de fondo de la barra de vida */
+    border-radius: 10px; /* Borde redondeado */
+    overflow: hidden; /* Oculta el contenido que exceda el tamaño */
+}
+
+.barra-vida-interior {
+    height: 100%; /* Altura de la barra de vida interior (relleno) */
+    background-color: #4CAF50; /* Color de la barra de vida */
+    width: 100%; /* Inicialmente llena toda la barra de vida */
+    transition: width 0.5s ease; /* Agrega una transición suave al cambiar el ancho */
+}
+
+/* Estilos para la barra de vida de Cataws */
+.barra-vida-cataws {
+    position: absolute;
+    top: 20px; /* Ajusta la posición verticalmente */
+    left: 20px; /* Ajusta la posición horizontalmente */
+}
+
+/* Estilos para la barra de vida de Crow */
+.barra-vida-crow {
+    position: absolute;
+    top: 20px; /* Ajusta la posición verticalmente */
+    right: 20px; /* Ajusta la posición horizontalmente */
+}
+
+.jump-animation {
+    animation: jump 0.5s ease-in-out;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+

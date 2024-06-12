@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Misery Warriors</title>
+    <link rel="stylesheet" href="lienzo.css">
+    <link rel="stylesheet" href="stylesjuego.css">
+</head>
+<body>
+    <!-- Contenedor del escenario -->
+    <div class="container">
+        <!-- Fondo del escenario -->
+        <img src="escenario.png" class="escenario" alt="Escenario">
+        
+        <!-- Contenedor de las barras de vida de Cataws -->
+        <div class="barra-vida-cataws">
+            <div id="contenedor-barra-vida-cataws" class="barra-vida">
+                <div class="barra-vida-interior" id="vida-cataws"></div>
+            </div>
+        </div>
+
+        <!-- Personaje "cataws" -->
+        <img src="cataws.png" class="personaje png-cataws auto-png" id="autoMoveElement" alt="Cataws">
+        
+        <!-- Contenedor de las barras de vida de Crow -->
+        <div class="barra-vida-crow">
+            <div id="contenedor-barra-vida-crow" class="barra-vida">
+                <div class="barra-vida-interior" id="vida-crow"></div>
+            </div>
+        </div>
+
+        <!-- Personaje "crow" -->
+        <img src="crow.png" class="personaje png-crow" alt="Crow">
+    </div>
+    <!-- Elemento para mostrar el resultado de la batalla -->
+    <div id="resultado"></div>
+    
+    <!-- Botón para iniciar la música -->
+    <button id="playButton">Play Music</button>
+    
+    <!-- Script para el juego -->
+    <script src="juegopelea.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = new Audio('musicaFONDO.mp3');
+            const playButton = document.getElementById('playButton');
+
+            playButton.addEventListener('click', function() {
+                audio.play().catch(function(error) {
+                    console.log('Error al intentar reproducir el audio:', error);
+                });
+                playButton.style.display = 'none'; // Ocultar el botón después de reproducir el audio
+            });
+        });
+    </script>
+</body>
+</html>
